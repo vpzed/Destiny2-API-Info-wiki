@@ -2,6 +2,8 @@
 
 [Official Bungie API github](https://github.com/Bungie-net/api)
 
+[Destiny API Discussion Discord server invite link](https://discord.gg/HU3Q4up)
+
 [DestinyDevs unofficial Wiki](http://destinydevs.github.io/BungieNetPlatform/)
 
 [the-traveler npm package for D2 API](https://github.com/alexanderwe/the-traveler)
