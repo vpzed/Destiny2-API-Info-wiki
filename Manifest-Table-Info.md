@@ -1,6 +1,6 @@
-## Manifest Table Information (as of 2017/09/13)
+## Manifest Table Information (by vpzed)
 
-Table list:
+Table list as of 2017/09/13:
 
 - DestinyActivityDefinition
 - DestinyActivityGraphDefinition
