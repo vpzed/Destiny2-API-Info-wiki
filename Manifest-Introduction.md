@@ -1,4 +1,4 @@
-## Destiny 2 Manifest Endpoint Introduction
+## Destiny 2 Manifest Endpoint Introduction (by vpzed)
 
 The endpoint URL to retrieve the base information about the manifest is:
 
