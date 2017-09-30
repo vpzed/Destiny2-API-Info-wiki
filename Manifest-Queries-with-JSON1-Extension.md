@@ -1,4 +1,4 @@
-## SQLite Queries using the JSON1 extension
+## SQLite Queries using the JSON1 extension (by vpzed)
 
 NOTE:  These require a SQLite query program with the JSON1 extensions.  These work fine in "DB Browser for SQLite" for example.
 
