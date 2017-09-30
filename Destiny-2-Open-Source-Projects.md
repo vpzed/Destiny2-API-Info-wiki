@@ -1,4 +1,4 @@
-## Destiny 2 API Information, Tools, and Projects:
+## Destiny 2 API Information, Tools, and Projects (by vpzed)
 
 [Official Bungie API github](https://github.com/Bungie-net/api)
 
