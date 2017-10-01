@@ -1,4 +1,4 @@
-## API Location Information (by kbreit)
+## Locations of Specific Game Information in the API (by kbreit)
 
 Table list as of 2017/10/01:
 
