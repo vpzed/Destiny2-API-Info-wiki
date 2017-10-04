@@ -26,7 +26,9 @@
 
 [DestinyLoadouts Alexa skill github](https://github.com/kissellj/DestinyLoadouts)
 
-[Destiny.plumbing github](https://github.com/joshhunt/destinyPlumbing)
+[destiny.plumbing github](https://github.com/joshhunt/destinyPlumbing)
+
+[destinySets github](https://github.com/joshhunt/destinySets)
 
 [destiny-gotg clan stats and Discord bot](https://github.com/adherrling/destiny-gotg)
 
@@ -34,4 +36,8 @@
 
 [7SAIF github org with multiple Destiny projects](https://github.com/7SAIF)
 
-[Python Social Auth which now supports Bungie Oauth](https://github.com/python-social-auth/)
+[Python Social Auth github which now supports Bungie Oauth](https://github.com/python-social-auth/)
+
+[Destiny-Daily-2 github](https://github.com/mattybeard/Destiny-Daily-2)
+
+[DestinyCollectionManager github](https://github.com/mattybeard/DestinyCollectionManager)
