@@ -24,6 +24,8 @@
 
 [Guardian Helper Alexa skill github](https://github.com/rking788/guardian-helper)
 
+[DestinyLoadouts Alexa skill github](https://github.com/kissellj/DestinyLoadouts)
+
 [Destiny.plumbing github](https://github.com/joshhunt/destinyPlumbing)
 
 [destiny-gotg clan stats and Discord bot](https://github.com/adherrling/destiny-gotg)
