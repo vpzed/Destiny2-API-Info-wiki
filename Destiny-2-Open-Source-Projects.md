@@ -31,3 +31,7 @@
 [destiny-gotg clan stats and Discord bot](https://github.com/adherrling/destiny-gotg)
 
 [Guardian.Theater github](https://github.com/chrisfried/guardian-theater-ng2)
+
+[7SAIF github org with multiple Destiny projects](https://github.com/7SAIF)
+
+[Python Social Auth which now supports Bungie Oauth](https://github.com/python-social-auth/)
