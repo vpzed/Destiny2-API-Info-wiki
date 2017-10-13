@@ -36,3 +36,11 @@ Return rows that match a Boolean value of "true":
     SELECT json_extract(DestinyActivityDefinition.json, '$.hash') as hash
     FROM DestinyActivityDefinition, json_tree(DestinyActivityDefinition.json)
     WHERE json_tree.key = 'redacted' AND json_tree.value
+
+Return specified columns and search an array property for a specific included value:
+
+    SELECT json_extract(DestinyInventoryItemDefinition.json, '$.displayProperties.name'), 
+    json_extract(DestinyInventoryItemDefinition.json, '$.displayProperties.icon')
+    FROM DestinyInventoryItemDefinition, 
+    json_each(DestinyInventoryItemDefinition.json, '$.itemCategoryHashes')
+    WHERE json_each.value LIKE '56';
