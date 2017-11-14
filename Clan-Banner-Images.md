@@ -1,6 +1,6 @@
 The Bungie Clan Banner images are generated from multiple images.  The real way to get these images can be found here https://github.com/xlxCLUxlx/Destiny2API/wiki/Building-Your-Clan-Banner:--How-To
 
-You can also use Selenium, an HTML parser, and a base64 decoder to "cheat" at getting the clan banner images from Bungie.net.  You need Selenium because the images are generated via Javascript so a simple curl/wget won't find them.  Here is a quick and dirty Python script to show the idea.
+You can also use Selenium, an HTML parser, and a base64 decoder to "cheat" at getting the clan banner images from Bungie.net.  You need Selenium because the images are generated via Javascript so a simple curl/wget won't find them.  Here is a quick and dirty Python3.6 script to show the idea.
 
 	#!/usr/bin/env python
 	"""
