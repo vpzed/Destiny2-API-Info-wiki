@@ -62,7 +62,9 @@ The base URL is http://www.bungie.net so for for the Response.mobileWorldContent
 
 Hitting that URL will download a file with the same name so in this case world_sql_content_4a0f279aaf9e1914bfcd210a1edea4a4.content
 
-Even though it doesn't indicate it with a file extension that is a zip file, so you need to unzip it. Since the file inside the zip has the same name I rename it to world_sql_content_4a0f279aaf9e1914bfcd210a1edea4a4.zip.  As mentioned the unzipped file will be world_sql_content_4a0f279aaf9e1914bfcd210a1edea4a4.content again.  This is the SQLite database file so I rename this to world_sql_content_4a0f279aaf9e1914bfcd210a1edea4a4.sqlite
+Even though it doesn't indicate it with a file extension that is a zip file, so you need to unzip it. Since the file inside the zip has the same name I rename it to world_sql_content_4a0f279aaf9e1914bfcd210a1edea4a4.zip.  As mentioned the unzipped file will be world_sql_content_4a0f279aaf9e1914bfcd210a1edea4a4.content again.  This is the SQLite database file so I rename this to world_sql_content_4a0f279aaf9e1914bfcd210a1edea4a4.sqlite3.
+
+As a note the string "4a0f279aaf9e1914bfcd210a1edea4a4" is the md5sum of the unzipped manifest file, so you can use the file name to verify the checksum and know your file came through the process OK.
 
 Then you use a SQLite3 program to interact with that unzipped file.  To just open it and look at the data to mess around I use [DB Browser for SQLite](http://sqlitebrowser.org/) and the [SQLite docs](https://sqlite.org/).
 
