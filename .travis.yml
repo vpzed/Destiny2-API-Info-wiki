@@ -1,0 +1,15 @@
+script:
+- |-
+  git config user.name "vpzed"
+  git config user.email "30138020+vpzed@users.noreply.github.com"
+  git remote remove origin
+  git remote add origin https://$GITHUB_API_KEY@github.com/vpzed/Destiny2-API-Info-wiki.git > /dev/null 2>&1
+  git remote add upstream https://$GITHUB_API_KEY@github.com/vpzed/Destiny2-API-Info-wiki.git > /dev/null 2>&1
+  git fetch origin
+  git fetch upstream
+  git merge upstream/master --no-edit
+  git push origin HEAD:master > /dev/null 2>&1
+  git push upstream HEAD:master > /dev/null 2>&1
+env:
+  matrix:
+    secure: u8DQ+n2XEPPDik6C2S6UxXm5H+161hTGebtXZN0KPf9aAgGU0PBAjIxzIGC21PTvKsfBbjQifuXMtHrCxYvJ4r2RVLhL5cLBaG7b8vx5O+eJZ/R323YQzleshlaTLPzltzYPW+rmzhdadtr4a/HJL1TbApKDYhlstgidL536BqwTakql3BfFaZzuYd4f2GUi4860Y2u83CEg+DFWwzc8FWu9jr5MeE8FNBiTQ69jfkWIQYPKv1jqYTC9BdLpZYiVWliatHMlyUL9w8hCrROv4znqMLpHqomSZKD/cGlJD2Cq7aW3dvbbRgSl5s4Ahveerjhm5GU0eT61bU0LtbbylZi4PXfXFHqpmZB9pzm21c0EILawsUFCtXItHb+DMs3wpIzmTFqKMLLqPHtEiYAx5REA6DelsWwYVNSbkRyEmTDi3nOJ7oetVxQk048892TehjHf8TfwthTBjdSbajvV9+PQkQghuoMvsxwyZi3+PhbwFOAcjaqMQ36ozEr8KVMtMOaIZ8u0MNDd/y5ZE/VIshcM+u3om/iTqLCNZokLwxBarUB09/9zPStMQptwYK+Ctl5uN+tY7FRj/Ov8yasrSTIkCxvfu1+o3vYed1M9y4m3WEpIb1Ne85OaGtPRklGp6UMkfICtBQ9XanTWlLbyzm350EjNg30a8waz83TFPfo=
