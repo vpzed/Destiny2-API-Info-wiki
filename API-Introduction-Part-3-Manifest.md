@@ -2,7 +2,7 @@
 
 ## Introduction
 
-The Destiny game manifest is a SQLite database that comes in several languages with localized versions of the game information specific to that language.  Most of the API responses utilize references (often <something>Hash) to point the user to the manifest.
+The Destiny game manifest is a SQLite database that comes in several languages with localized versions of the game information specific to that language.  Most of the API responses utilize references (often {something}Hash) to point the user to the manifest.
 
 
 ## Retrieving the Manifest Database
@@ -59,7 +59,7 @@ https://www.bungie.net/Platform/Destiny2/Manifest/
 }
 
 
-The main game world database is listed in the mobileWorldContentPaths object your desired language.  I use English so the one I download is Response.mobileWorldContentPaths.en  The other manifest databases like the mobileClanBannerDatabasePath are for very specific use cases and will not be covered in this tutorial.
+The main game world database is listed in the Response.mobileWorldContentPaths object for your desired language.  I use English so the one I download is Response.mobileWorldContentPaths.en  The other manifest databases like the mobileClanBannerDatabasePath are for very specific use cases and will not be covered in this tutorial.
 
 The base URL is https://www.bungie.net so for for the Response.mobileWorldContentPaths.en above that would give:
 
@@ -67,13 +67,13 @@ https://www.bungie.net/common/destiny2_content/sqlite/en/world_sql_content_8ce5b
 
 Hitting that URL will download a file with the same name so in this case world_sql_content_8ce5b3356e8749ddcb7f81c0ac8875c6.content
 
-Even though it doesn't indicate it with a file extension that is a ZIP file, so you need to unzip it. Since the file inside the zip has the same name I rename it to world_sql_content_8ce5b3356e8749ddcb7f81c0ac8875c6.zip and then extract the archive.  As mentioned the unzipped file will be world_sql_content_8ce5b3356e8749ddcb7f81c0ac8875c6.content again.  This is the SQLite database file so I rename this to world_sql_content_8ce5b3356e8749ddcb7f81c0ac8875c6.sqlite3 for easy recognition.
+Even though it doesn't indicate it with a file extension that is a ZIP file, so you need to unzip it. Since the file inside the zip has the same name I rename it to world_sql_content_8ce5b3356e8749ddcb7f81c0ac8875c6.zip and then extract the archive.  As mentioned the unzipped file will be world_sql_content_8ce5b3356e8749ddcb7f81c0ac8875c6.content again.  This is the SQLite database file so I rename this to world_sql_content_8ce5b3356e8749ddcb7f81c0ac8875c6.sqlite3 for easy recognition on my PC.  In your code these renaming steps are not required.
 
 NOTE: The string "8ce5b3356e8749ddcb7f81c0ac8875c6" is the md5sum of the **unzipped** manifest file, so you can use the file name to verify the checksum and know your file came through the process OK.
 
 Then you use a SQLite3 program to interact with that unzipped file.  For this tutorial I will use [DB Browser for SQLite](http://sqlitebrowser.org/) and the [SQLite docs](https://sqlite.org/).
 
-All but one of the tables have an id column and json column.  The json column contains a JSON object with the actual data inside which is a lot like working with the JSON responses from the API.  One exception is the DestinyHistoricalStatsDefinition table which uses a key and json setup.  The table names use a format of Destiny{identifier}Definition so DestinyRaceDefinition is the table with Race information.
+All but one of the tables have an 'id' column and 'json' column.  The 'json' column contains a JSON object with the actual data inside which is a lot like working with the JSON responses from the API.  One exception is the DestinyHistoricalStatsDefinition table which uses a 'key' and 'json' setup.  The table names use a format of Destiny{identifier}Definition so DestinyRaceDefinition is the table with Race information.
 
 
 ## Manifest Updates
@@ -98,7 +98,7 @@ Then use that id in a SQL query like:
     SELECT json FROM DestinyRaceDefinition WHERE id = -1491684358;
 
 
-For some additional code examples see the DestinyDevs Wiki [here](http://destinydevs.github.io/BungieNetPlatform/docs/Manifest). This is for the D1 manifest but the same concepts apply.
+NOTE:  For some additional code examples see the DestinyDevs Wiki [here](http://destinydevs.github.io/BungieNetPlatform/docs/Manifest). This is for the D1 manifest but the same concepts apply.
 
 Another way to query the manifest is the use the SQLite JSON extensions.  This allows you to query the json column directly and bypass the use of the id column and the conversions it entails.
 

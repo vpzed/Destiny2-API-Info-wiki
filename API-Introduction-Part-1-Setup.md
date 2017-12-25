@@ -20,7 +20,9 @@ Now in the API Keys section you should see your API key.  You will use this key 
 
 ## Destiny 2 API Documentation
 
-The home of Destiny 2 API information is https://github.com/Bungie-net/api and the main API documentation like is https://bungie-net.github.io/multi/index.html so bookmark these links as you will refer to them frequently.  It is recommended that you create a GitHub account as this allows you to post or follow Issues for the repository.  
+The home of Destiny 2 API information is https://github.com/Bungie-net/api and the main API documentation like is https://bungie-net.github.io/multi/index.html so bookmark these links as you will refer to them frequently.  It will be helpful to reference the main API documentation while following along with this tutorial.
+
+It is recommended that you create a GitHub account as this allows you to post or follow Issues for the repository.  
 
 
 ## API Tool
@@ -39,12 +41,12 @@ Key: X-API-KEY
 Value: {paste your API key here}  
 Description: Destiny  
 
-Save and close the Manage Presets screen.  You should now see your preset in the Preset menu.  Select your preset to add your API key to the request.  It should show up in the Headers with a checkbox on the left.  You will need to use your prest to add the API key header to each request you build in Postman.
+Save and close the Manage Presets screen.  You should now see your preset in the Preset menu.  Select your preset to add your API key to the request.  It should show up in the Headers with a checkbox on the left.  You will need to use your preset to add the API key header to each request you build in Postman.
 
 
 ## First API Request
 
-Now on to your first API request!  We'll use the popular Destiny streamer Datto to do an example request.  We'll explain more about API requests in the next section of the tutorial, but for now enter this in the box next to GET
+Now on to your first API request!  We'll use the popular Destiny streamer Datto to do an example request.  We'll explain more about API requests in the next section of the tutorial, but for now enter this in the box next to GET:
 
 https://www.bungie.net/Platform/Destiny2/SearchDestinyPlayer/-1/dattowatto/
 
@@ -68,6 +70,6 @@ Click the Send button.  If you entered your API key correctly you should see thi
 
 Click the Save button, enter Destiny2.SearchDestinyPlayer, select your Destiny collection, and click Save to save your new request to the Collection.
 
-This completes Part 1 - Setup.  In Part 2 we'll go over common entry points for the API and how to perform common requests.
+This completes Part 1 - Setup.  In Part 2 we'll get into some fundamental concepts for using the API.
 
 

@@ -4,14 +4,16 @@
 
 In Part 1 - Setup we got our API key and setup Postman to start using the Destiny 2 API.  In this tutorial we'll continue with that foundation.
 
-Each request we build will follow the same concept as Part 1.  We'll open a new request tab in Postman, use our Preset to add the API key header, and enter the API endpoint URL in the GET box.  Once we test that it is working we'll save that request to the Collection.  As you work you'll build out a Collection of all the requests you use regularly so you can see how they work and have example responses that you can use to build your application/website code around.
+Each request we build will follow the same concept as Part 1.  We'll open a new request tab in Postman, use our Preset to add the API key header, and enter the API endpoint URL in the GET box.  Once we test that it is working, we'll save that request to the Collection.  As you work, you'll build out a Collection of all the requests you use regularly so you can see how they work and have example responses that you can use to build your application/website code around.
 
 
 ## Accounts 101
 
 The Destiny 2 API uses many different kinds of accounts, account types, and groups.  Here I'll briefly summarize the most common pieces.
 
-The first concept is membershipType and membershipId.  An account is represented by a pair of integers - the membershipType (int32) and membershipId (int64). A Bungie account is always membershipType 254.  A Destiny account has a different membershipType depending on the associated game platform with Xbox Live: 1, PlayStation Network: 2 and Battle.net: 4.  A few search related endpoints also allow the special account type of All: -1; however, most endpoints require a specific matching membershipType and membershipID.
+The first concept is membershipType and membershipId.  An account is represented by a pair of integers - the membershipType (int32) and membershipId (int64). A Bungie account is always membershipType 254.  A Destiny account has a different membershipType depending on the associated game platform with Xbox Live: 1, PlayStation Network: 2 and Battle.net: 4.  A few search related endpoints also allow the special account type of All: -1; however, most endpoints require a specific matching pair of membershipType and membershipID.
+
+NOTE:  In Part 1 we used the special account type of -1 in our Destiny2.SearchDestinyPlayer request.  If you only want to search a specific type of membership like say Battle.net then you can use say 4 instead of -1, which will then only return matches for that platform.
 
 So if we go back to the API Response from Part 1:
 
@@ -42,7 +44,7 @@ You will see many references throughout the documentation for membershipType, me
 
 ## More API Requests
 
-It is common to use a gamertag as an API entrypoint.  As before we can use the gamertag to get the account information using the Destiny2.SearchDestinyPlayer endpoint.  We'll continue with the Datto example.  NOTE: Gamertags must be URL encoded, so say a Battle.Net user of test#1224 would become test%231234
+It is common to use a gamertag as an API entrypoint.  As before, we can use the gamertag to get the account information using the Destiny2.SearchDestinyPlayer endpoint.  We'll continue with the Datto example.  NOTE: Gamertags must be URL encoded, so say a Battle.Net user of test#1224 would become test%231234
 
 A very frequently used endpoint is the Destiny2.GetProfile.  This endpoint uses the concept of components to return a wide array of information about a Destiny account.
 
@@ -149,7 +151,7 @@ https://www.bungie.net/Platform/Destiny2/2/Profile/4611686018428389623/Character
 		"MessageData": {}
 	}
 
-As you can see lots of information here and a lot of it probably doesn't make a lot of sense yet.  This is due to Bungie's desire to make the API responsive to localization.  Therefore most of the data returned is a reference which must be "de-referenced" with a localized game manifest to allow it to be presented in the respective language.  The use of the game manifest is covered in other articles on this Wiki.
+As you can see lots of information here and a lot of it probably doesn't make a lot of sense yet.  This is due to Bungie's desire to make the API responsive to localization.  Therefore most of the data returned is a reference which must be "de-referenced" with a localized game manifest to allow it to be presented in the respective language.  The use of the game manifest is covered in in the next article of this series.
 
 One quick note image links in the API response have a root of https://www.bungie.net so the emblemPath above would translate to https://www.bungie.net/common/destiny2_content/icons/0b60b0d2d119a35a7883d81d9e409204.jpg
 
@@ -304,7 +306,7 @@ https://www.bungie.net/Platform/GroupV2/User/2/4611686018428389623/0/1/
 		"MessageData": {}
 	}
 	
-Again lots of information here, but the key information is yes Dattowatt is in a Clan with groupId: 881267, and name: "Math Class".
+Again lots of information here, but the key information is yes Dattowatto is in a Clan with groupId: 881267, and name: "Math Class".
 
 Hopefully this helps introduce the concepts of accounts and groups in Destiny 2.  In Part 3 we'll get started with some introductory information on the game manifest.
 
