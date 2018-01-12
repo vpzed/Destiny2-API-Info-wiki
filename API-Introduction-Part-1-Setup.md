@@ -17,6 +17,8 @@ In the New Application screen enter your Application Name and Website.  In the A
 
 Now in the API Keys section you should see your API key.  You will use this key in every Bungie API request you make.  This key is private and should not be shared, published in your source code, etc.  Copy the API Key into a safe place as you will use it later in this tutorial.
 
+For a detailed look at the concepts on the Bungie.net Application page [please see this article](https://github.com/xlxCLUxlx/Destiny2API/wiki/Bungie.net-Application-Portal)
+
 
 ## Destiny 2 API Documentation
 
