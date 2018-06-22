@@ -85,7 +85,9 @@ The manifest updates on an irregular schedule.  If your application relies heavi
 
 The most common use case for the manifest is the API is going to give you something like say raceHash = 2803282938 but what you want is the name of that race so you need to look that up in the manifest.
 
-So you convert that hash into a manifest id column value with something like this Python snippet:
+In all programming languages, there is a limit to the number of digits an integer datatype variable can hold. In the Destiny Manifest, apart from a couple of items, majority of them have more than 10 digits in them, which cannot be held in integer variables, thus preventing you from performing queries using them. The below code snippet is used to convert such large numbers into a negative number within the integer datatype limits.
+
+Convert that hash into a manifest id column value with something like this Python snippet:
 
     val = int(val)
     if (val & (1 << (32 - 1))) != 0:
