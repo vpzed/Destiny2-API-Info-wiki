@@ -180,6 +180,12 @@ In C#:
 var id = unchecked((int) hash);
 ```
 
+In Javascript:
+
+```
+const id = hash >> 32;
+```
+
 ## Manifest Tables
 
 As of Dec 2017 there are 39 manifest tables detailing game information.
