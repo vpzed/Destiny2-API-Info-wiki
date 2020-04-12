@@ -85,7 +85,7 @@ The manifest updates on an irregular schedule.  If your application relies heavi
 
 The most common use case for the manifest is the API is going to give you something like say raceHash = 2803282938 but what you want is the name of that race so you need to look that up in the manifest.
 
-First, you must convert the hash from a value that matches the ID column. For a `raceHash` of `2803282938` it will need to be converted to the ID `-1491684358`. See "Converting hashes" for more details and code samples
+First, you must convert the hash from a value that matches the ID column. For a `raceHash` of `2803282938` it will need to be converted to the ID `-1491684358`. See [Converting hashes for the SQLite DB](#converting-hashes-for-the-sqlite-db) for more details and code samples
 
 Then use that id in a SQL query like:
 
