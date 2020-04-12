@@ -85,13 +85,7 @@ The manifest updates on an irregular schedule.  If your application relies heavi
 
 The most common use case for the manifest is the API is going to give you something like say raceHash = 2803282938 but what you want is the name of that race so you need to look that up in the manifest.
 
-So you convert that hash into a manifest id column value with something like this Python snippet:
-
-    val = int(val)
-    if (val & (1 << (32 - 1))) != 0:
-        val = val - (1 << 32)
-		
-For a raceHash of 2803282938 that will give you an id of -1491684358.  
+First, you must convert the hash from a value that matches the ID column. For a `raceHash` of `2803282938` it will need to be converted to the ID `-1491684358`. See "Converting hashes" for more details and code samples
 
 Then use that id in a SQL query like:
 
@@ -166,6 +160,25 @@ which returns:
 		"blacklisted": false
 	}
 
+## Converting hashes for the SQLite DB
+
+In the API, hashes (like item hashes) are can be represented as an "unsigned 32 int". However, in the SQLiteDB, these hashes are represented as a "signed 32 int". The unsigned 32 int overflows what can be stored in SQLite's signed 32 int, so the majority of items in the DB will have negative ids. For example, the item "Vigil of Heroes" with item hash `2592351697` has an ID value of `-1702615599` in the definitions SQLite database.
+
+To query the SQLite DB for a hash, you will need to convert the hash from an "unsigned 32 int" to a "signed 32 int".
+
+In Python:
+
+```python
+id = int(hash)
+if (id & (1 << (32 - 1))) != 0:
+  id = id - (1 << 32)
+```
+
+In C#:
+
+```csharp
+var id = unchecked((int) hash);
+```
 
 ## Manifest Tables
 
