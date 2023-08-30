@@ -35,3 +35,7 @@
 [Destiny-Daily-2 github](https://github.com/mattybeard/Destiny-Daily-2)
 
 [DestinyCollectionManager github](https://github.com/mattybeard/DestinyCollectionManager)
+
+[D2Bearer helps generate bearer tokens for Bungie Oauth github](https://github.com/tlstommy/d2bearer)
+
+[Xûr Tracker tracks Xûr's weekly location and inventory github](https://github.com/tlstommy/xurtracker.com)
